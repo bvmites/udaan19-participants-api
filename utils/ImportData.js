@@ -6,7 +6,7 @@ let crypto = require('crypto');
 dotenv.config();
 
 
-const inputFile = 'utils/Data/NonTech/nt3.csv';
+const inputFile = 'Data/Tech/me5.csv';   //me5 done
 
 // let event = {};
 
@@ -14,7 +14,7 @@ function readEventDataNew(fileName) {
     const data = fs.readFileSync(fileName);
     return parse(data).map(column => {
 
-        const thestr = column[5]+column[4];
+        const thestr = column[6]+column[5];
         let code = crypto.createHmac('sha512','theKey').update(thestr).digest('hex').toString().slice(0,8);
 
 

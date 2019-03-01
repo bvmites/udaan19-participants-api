@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "branch": {
+            "type": "string"
+        },
+        "year": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 10
+        },
+        "events": {
+            "type": "object",
+            "properties": {
+                "rec_no": {
+                    "type": "string"
+                },
+                "eventName": {
+                    "type": "string"
+                },
+                "round": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
